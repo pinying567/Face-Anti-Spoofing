@@ -21,8 +21,8 @@ Label 0 represents "Real" and label 1 represent "Fake", respectively.
 **2. Three-Class Classification (Real/Print/Replay)**
 - For the training data (videos are named "{phone}_{session}_{human ID}_{access type}"), access type 1 represents "Real", while 2, 3 represent "Print" and 4, 5 are "Replay".
 - Label 0 represents "Real" and label 1, 2 represent "Print" and "Replay", respectively.
- <!--> ![](asset/task.png)-->
-![](https://i.imgur.com/R5aiZWr.png)
+![](asset/task.png)
+<!--![](https://i.imgur.com/R5aiZWr.png)-->
 
 ### Datasets
 **1. Oulu-NPU**
@@ -46,8 +46,8 @@ Our model with all these components achieves **satisfactory performance on both 
     1) CNN: We adopt **MobileNetv2** with ImageNet pretrained weights as the feature extractor, which is followed by a linear layer that converts the feature dimension from 1280 to 512.
     2) RNN: We choose a two-layer **bidirectional LSTM** as our RNN module, since it can model sequential information bidirectionally. The final prediction is produced from passing the last output of RNN through a linear layer with Sigmoid and Softmax activation function for Task1 (Real/Fake) and Task2 (Real/Print/Replay) respectively.
 
- <!--> ![](asset/arch.png)-->
-![](https://i.imgur.com/sDh8uZ3.png)
+![](asset/arch.png)
+ <!--![](https://i.imgur.com/sDh8uZ3.png)-->
 
 - Although the whole network can be trained end-to-end, the back propagation path for CNN could be very long, especially for the former layers of CNN.
 - As a result, we divide our training process into two stages:  
@@ -119,8 +119,8 @@ python3 main_task2.py --phase test --checkpoint <checkpoint> --batch_size 32 --t
 
  <!--> ![](asset/result1.png)-->
 <!--![](https://i.imgur.com/bszB6fD.png)-->
-<img src=https://i.imgur.com/bszB6fD.png width=80%>
+<img src=asset/result1.png width=80%>
 
  <!--> ![](asset/result2.png)-->
  <!--![](https://i.imgur.com/a1jyq9i.png)-->
-<img src=https://i.imgur.com/a1jyq9i.png width=80%>
+<img src=asset/result2.png width=80%>
