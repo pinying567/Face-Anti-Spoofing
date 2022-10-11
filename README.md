@@ -117,10 +117,10 @@ python3 main_task2.py --phase test --checkpoint <checkpoint> --batch_size 32 --t
 - SiW (ACC): **0.76260**
 
 
- <!--> ![](asset/result1.png)-->
+ <!--![](asset/result1.png)-->
 <!--![](https://i.imgur.com/bszB6fD.png)-->
 <img src=asset/result1.png width=80%>
 
- <!--> ![](asset/result2.png)-->
+ <!--![](asset/result2.png)-->
  <!--![](https://i.imgur.com/a1jyq9i.png)-->
 <img src=asset/result2.png width=80%>
